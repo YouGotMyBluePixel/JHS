@@ -1,0 +1,33 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_NAME: JHS
+  APP_ENV: production
+  APP_KEY: base64:nxpgUt2pl0osn69RKN0cNNLDGqs1e8osBzT/VU65Ohw=
+  APP_DEBUG: false
+
+  LOG_CHANNEL: stack
+
+  STORAGE_DIR: /tmp
+
+  APP_LOG: errorlog
+
+  DB_HOST: mysql5006.site4now.net
+  DB_DATABASE: db_a3e598_jhs
+  DB_USERNAME: a3e598_jhs
+  DB_PASSWORD: !JHS2020
+
+  BROADCAST_DRIVER: log
+  QUEUE_CONNECTION: sync
+  CACHE_DRIVER: file
+  SESSION_DRIVER: cookie
+  SESSION_LIFETIME: 120
